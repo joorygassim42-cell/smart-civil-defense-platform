@@ -1,0 +1,109 @@
+# منصة الدفاع المدني الذكية - ملف الإعدادات
+
+app:
+  name: "منصة ذكية متكاملة لرصد السيول والزلازل"
+  version: "1.0.0"
+  description: "نموذج متكامل يجمع المراقبة، التنبيهات، التوقعات، والمحاكاة"
+  language: "ar"
+
+wadis:
+  - name: "وادي بيشة"
+    risk_sensitivity: "عالي"
+    coordinates:
+      lat: 20.25
+      lon: 42.25
+    area_km2: 500
+    population: 15000
+    
+  - name: "وادي تربة"
+    risk_sensitivity: "متوسط"
+    coordinates:
+      lat: 20.50
+      lon: 42.50
+    area_km2: 300
+    population: 8000
+    
+  - name: "وادي رقم 3"
+    risk_sensitivity: "منخفض"
+    coordinates:
+      lat: 20.75
+      lon: 42.75
+    area_km2: 200
+    population: 3000
+
+risk_levels:
+  low:
+    threshold_min: 0
+    threshold_max: 10
+    color: "green"
+    alert_level: "معلومة"
+    
+  medium:
+    threshold_min: 10
+    threshold_max: 30
+    color: "yellow"
+    alert_level: "تحذير"
+    
+  high:
+    threshold_min: 30
+    threshold_max: 50
+    color: "orange"
+    alert_level: "تنبيه"
+    
+  critical:
+    threshold_min: 50
+    threshold_max: 1000
+    color: "red"
+    alert_level: "حرج"
+
+monitor:
+  update_interval_minutes: 30
+  forecast_days: 7
+  historical_years: 5
+
+nasa_api:
+  enabled: false
+  products:
+    - name: "GPM IMERG"
+      description: "بيانات الأمطار بدقة عالية"
+      frequency: "30 دقيقة"
+    - name: "MODIS"
+      description: "بيانات التصوير المرئي"
+      frequency: "يومي"
+    - name: "SRTM DEM"
+      description: "نماذج الارتفاع الرقمية"
+      frequency: "ثابت"
+
+google_earth_engine:
+  enabled: false
+  features:
+    - "تحليل الانحدار"
+    - "حساب تدفق المياه"
+    - "تحديد الأودية"
+    - "تحليل تغير الأراضي"
+
+roles:
+  - name: "مستخدم عادي"
+    permissions:
+      - "view_dashboard"
+      - "view_general_info"
+      
+  - name: "مراقب ميداني"
+    permissions:
+      - "view_dashboard"
+      - "submit_observations"
+      - "view_alerts"
+      - "view_wadis_details"
+      
+  - name: "غرفة العمليات"
+    permissions:
+      - "view_dashboard"
+      - "view_alerts"
+      - "view_wadis_details"
+      - "run_simulations"
+      - "view_forecasts"
+      - "manage_alerts"
+      
+  - name: "مدير النظام"
+    permissions:
+      - "all"

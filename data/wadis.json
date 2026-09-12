@@ -1,0 +1,69 @@
+{
+  "wadis": [
+    {
+      "id": 1,
+      "name": "وادي بيشة",
+      "risk_sensitivity": "عالي",
+      "coordinates": {
+        "latitude": 20.25,
+        "longitude": 42.25
+      },
+      "area_km2": 500,
+      "population": 15000,
+      "elevation_min": 800,
+      "elevation_max": 2400,
+      "description": "وادي كبير يتميز بتضاريس وعرة وكثافة سكانية عالية",
+      "history": [
+        {
+          "date": "2022-04-10",
+          "event_type": "سيل متوسط",
+          "rainfall_mm": 45,
+          "impact": "إغلاق طريق فرعي"
+        },
+        {
+          "date": "2023-08-21",
+          "event_type": "سيل قوي",
+          "rainfall_mm": 120,
+          "impact": "أضرار في بعض المنازل"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "وادي تربة",
+      "risk_sensitivity": "متوسط",
+      "coordinates": {
+        "latitude": 20.50,
+        "longitude": 42.50
+      },
+      "area_km2": 300,
+      "population": 8000,
+      "elevation_min": 600,
+      "elevation_max": 1800,
+      "description": "وادي متوسط الحجم بتضاريس معتدلة",
+      "history": [
+        {
+          "date": "2024-03-05",
+          "event_type": "سيل خفيف",
+          "rainfall_mm": 25,
+          "impact": "لا أضرار كبيرة"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "وادي رقم 3",
+      "risk_sensitivity": "منخفض",
+      "coordinates": {
+        "latitude": 20.75,
+        "longitude": 42.75
+      },
+      "area_km2": 200,
+      "population": 3000,
+      "elevation_min": 400,
+      "elevation_max": 1200,
+      "description": "وادي صغير بمخاطر منخفضة",
+      "history": []
+    }
+  ]
+}
